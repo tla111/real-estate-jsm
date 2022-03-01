@@ -6,6 +6,7 @@ import { BsFilter } from 'react-icons/bs';
 import Property from '../components/Property';
 import SearchFilters from '../components/SearchFilters';
 import noresult from '../assets/images/noresult.svg'
+import { baseUrl, fetchApi } from '../utils/fetchApi';
 
 const Search = ({ properties }) => {
     const [searchFilters, setSearchFilters] = useState(false);
@@ -61,7 +62,7 @@ export async function getServerSideProps({ query }) {
 
     return {
         props: {
-            properties: data?.hits,
+            properties: data?.hits
         },
     };
 }
