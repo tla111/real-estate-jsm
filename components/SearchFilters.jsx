@@ -23,7 +23,11 @@ const SearchFilters = () => {
                         p="2"
                         onChange={(e) => searchProperties({ [filter.queryName]: e.target.value })}
                     >
-
+                        {filter?.items?.map((item) => (
+                            <option value={item.value} key={item.value}>
+                                {item.name}
+                            </option>
+                        ))}
                     </Select>
                 </Box>
             ))}
