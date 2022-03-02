@@ -11,7 +11,7 @@ const LeftArrow = () => {
         <Flex justifyContent="center" alignItems="center" marginRight="1">
             <Icon
                 as={FaArrowAltCircleLeft}
-                onClick={scrollPrev}
+                onClick={() => scrollPrev()}
                 fontSize="2xl"
                 cursor="pointer"
             />
@@ -26,7 +26,7 @@ const RightArrow = () => {
         <Flex justifyContent="center" alignItems="center" marginRight="1">
             <Icon
                 as={FaArrowAltCircleRight}
-                onClick={scrollNext}
+                onClick={() => scrollNext()}
                 fontSize="2xl"
                 cursor="pointer"
             />
@@ -41,7 +41,7 @@ const ImageScrollbar = ({ data }) => (
                 <Image
                     alt="property"
                     placeholder="blur"
-                    blurDataUrl={item.url}
+                    blurDataURL={item.url}
                     src={item.url}
                     width={1000}
                     height={500}
